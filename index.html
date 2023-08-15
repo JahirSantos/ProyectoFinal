@@ -3,31 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index_style.css">
     <title>Proyecto Tesis</title>
 </head>
 <body>
-    <header>
-        <img src="" alt="logo">
+    <header class="header">
+        <img src="/source/logo_unprg.png" alt="logo">
     </header>
-    <main>
+    <main class="main">
         <div class="container-options">
             <nav class="nav-options">
-                <li class="nav-item"><a href="">Opcion 1</a>
-                    <ul class="subnav-options">
-                        <li class="subnav-item"><a href="">Opcion 1.1</a></li>
-                        <li class="subnav-item"><a href="">Opcion 1.2</a></li>
-                        <li class="subnav-item"><a href="">Opcion 1.3</a></li>
-                        <li class="subnav-item"><a href="">Opcion 1.4</a></li>
-                    </ul>
-                </li>
+                <li class="nav-item"><a href="">Opcion 1</a></li>
                 <li class="nav-item"><a href="">Opcion 2</a></li>
                 <li class="nav-item"><a href="">Opcion 3</a></li>
                 <li class="nav-item"><a href="">Opcion 4</a></li>
             </nav>
         </div>
+        <div class="nav-item-link">
+            <ul class="subnav-options">
+                <li class="subnav-item"><a href="">Opcion 1.1</a></li>
+                <li class="subnav-item"><a href="">Opcion 1.2</a></li>
+                <li class="subnav-item"><a href="">Opcion 1.3</a></li>
+                <li class="subnav-item"><a href="">Opcion 1.4</a></li>
+            </ul>
+        </div>
+        <div class="container-content">
+            <!-- Debemos averiguar como funciona cada opcion para asi vincularla a la lista de opciones que tiene
+            asi como se ve en opcion 1 que tiene sus sub opciones 1.1 y así y en base a eso cada sub cion tiene su propio
+            contenido y todos esos contenidos van dentro de container-content , mantengan las correcta escritura para que
+            asi no afecte al css-->
+        </div>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <p class="content-footer">Derechos Reservados</p>
     </footer>
 </body>
 </html>
