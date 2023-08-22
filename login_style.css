@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+}
+.main{
+    background-color: #2A4F6E;
+    height: 90vh;
+    width: 100%;
+}
+.footer{
+    background-color: #2A4F6E;
+    height: 10vh;
+    width: 100%;
+}
