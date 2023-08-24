@@ -4,31 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index_style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Proyecto Tesis</title>
 </head>
 <body>
-    <header class="header">
-        <p class="rol">Administrativo</p>
-        <div class="div-username">
-            <p class="content-username">username</p>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-library' ></i>
+            <span class="logo_name">Proyecto de Tesis</span>
         </div>
-    </header>
-    <main class="main">
-        <aside class="aside-left">
-            <ul class="">
-                <li><a href="">Registrar Docentes</a></li>
-                <li><a href="">Listar Docentes</a></li>
-                <li><a href="">Registrar Tesistas</a></li>
-                <li><a href="">Listar Tesistas</a></li>
-            </ul>
-        </aside>
-        <section class="main-section">
-            <img src="/source/logo_unprg.png" alt="logo_unprg">
-        </section>
-    </main>
-    <footer class="footer">
-        <p class="content-footer">Derechos Reservados</p>
-    </footer>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Administrativo</span>
+                </a>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="link_name">Docente</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow' ></i>
+                </div>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="link_name">Tesista</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow' ></i>
+                </div>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
