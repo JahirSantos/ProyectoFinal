@@ -10,36 +10,52 @@
 </head>
 <body>
     <div class="sidebar">
-        <div class="logo-details">
-            <i class='bx bx-library' ></i>
-            <span class="logo_name">Proyecto de Tesis</span>
-        </div>
-        <ul class="nav-links">
+        <a href="#" class="logo-box">
+            <i class='bx bx-library'></i>
+            <div class="logo-name">Sistema de Tesis</div>
+        </a>
+        <!--- List -->
+        <ul class="sidebar-list">
             <li>
-                <a href="#">
-                    <i class='bx bx-grid-alt'></i>
-                    <span class="link_name">Administrativo</span>
-                </a>
-            </li>
-            <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class='bx bx-grid-alt'></i>
-                        <span class="link_name">Docente</span>
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-grid-alt' ></i>
+                        <span class="name">Administrador</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow' ></i>
                 </div>
             </li>
-            <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class='bx bx-grid-alt'></i>
-                        <span class="link_name">Tesista</span>
+
+            <li class="dropdown">
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-grid-alt' ></i>
+                        <span class="name">Docentes</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow' ></i>
+                    <i class='bx bxs-chevron-down' ></i>
+                </div>
+                <div class="sub-menu">
+                        <a href="#" class="link sub-menu-title">Docentes</a>
+                        <a href="#" class="link">Registrar Docentes</a>
+                        <a href="#" class="link">Listar Docentes</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-grid-alt' ></i>
+                        <span class="name">Tesistas</span>
+                    </a>
+                        <i class='bx bxs-chevron-down' ></i>
+                </div>
+                <div class="sub-menu">
+                        <a href="#" class="link sub-menu-title">Tesistas</a>
+                        <a href="#" class="link">Registrar Tesistas</a>
+                        <a href="#" class="link">Listar Tesistas</a>
                 </div>
             </li>
         </ul>
     </div>
+    <script src="index_script.js"></script>
 </body>
 </html>
