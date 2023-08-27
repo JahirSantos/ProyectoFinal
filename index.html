@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestion de Tesis</title>
+
+    <!-- Box Icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="index_style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Proyecto Tesis</title>
+    <!-- Styles  -->
+    <link rel="shortcut icon" href="assets/img/kxp_fav.png" type="image/x-icon">
 </head>
+
 <body>
-    <div class="sidebar">
+    <div class="sidebar close">
+        <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
             <i class='bx bx-library'></i>
-            <div class="logo-name">Sistema de Tesis</div>
+            <div class="logo-name">Gestion de Tesis</div>
         </a>
-        <!--- List -->
+
+        <!-- ========== List ============  -->
         <ul class="sidebar-list">
+            <!-- -------- Non Dropdown List Item ------- -->
             <li>
                 <div class="title">
                     <a href="#" class="link">
-                        <i class='bx bx-grid-alt' ></i>
+                        <i class='bx bx-grid-alt'></i>
                         <span class="name">Administrador</span>
                     </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Administrador</a>
+                    <!-- submenu links here  -->
                 </div>
             </li>
 
+            <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
                     <a href="#" class="link">
-                        <i class='bx bx-grid-alt' ></i>
+                        <i class='bx bx-collection'></i>
                         <span class="name">Docentes</span>
                     </a>
-                    <i class='bx bxs-chevron-down' ></i>
+                    <i class='bx bxs-chevron-down'></i>
                 </div>
-                <div class="sub-menu">
-                        <a href="#" class="link sub-menu-title">Docentes</a>
-                        <a href="#" class="link">Registrar Docentes</a>
-                        <a href="#" class="link">Listar Docentes</a>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Docentes</a>
+                    <a href="#" class="link">Registrar Docentes</a>
+                    <a href="#" class="link">Listar Docentes</a>
                 </div>
             </li>
 
+            <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
                     <a href="#" class="link">
-                        <i class='bx bx-grid-alt' ></i>
+                        <i class='bx bx-book-alt'></i>
                         <span class="name">Tesistas</span>
                     </a>
-                        <i class='bx bxs-chevron-down' ></i>
+                    <i class='bx bxs-chevron-down'></i>
                 </div>
-                <div class="sub-menu">
-                        <a href="#" class="link sub-menu-title">Tesistas</a>
-                        <a href="#" class="link">Registrar Tesistas</a>
-                        <a href="#" class="link">Listar Tesistas</a>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Tesistas</a>
+                    <a href="#" class="link">Registrar Tesistas</a>
+                    <a href="#" class="link">Listar Tesistas</a>
                 </div>
             </li>
         </ul>
     </div>
+
+    <!-- ============= Home Section =============== -->
+    <section class="home">
+        <div class="toggle-sidebar">
+            <i class='bx bx-menu'></i>
+            <div class="text">Toggle</div>
+        </div>
+    </section>
+
+    <!-- Link JS -->
     <script src="index_script.js"></script>
 </body>
+
 </html>

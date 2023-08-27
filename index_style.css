@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-/*Globals*/
+/* Google Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Globals  */
 *{
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,26 +11,31 @@
     text-decoration: none;
 }
 
-/*variables*/
+/* Variables  */
 :root{
-    --color_blue:#3f93f1;
+    --color_Blue: #3f93f1;
     --color_Dark1: #1e1e1e;
-    --color_Dark2:#252527;
+    --color_Dark2: #252527;
     --color_Light1: #dfdfdf;
     --color_Light2: #c4c4c4;
 }
-/*------------ Sidebar --------------*/
+
+/* =============== Sidebar =============== */
 .sidebar{
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
-    height: 100vh;
-    width: 300px;
+    height: 100%;
+    width: 260px;
     background-color: var(--color_Dark1);
     transition: all .5s ease;
     z-index: 100;
 }
-/* ----------- Logo ----------------*/
+.sidebar.close{
+    width: 78px;
+}
+
+/* --------- Logo ------------ */
 .logo-box{
     height: 60px;
     width: 100%;
@@ -38,7 +45,7 @@
     transition: all .5s ease;
 }
 .logo-box:hover{
-    color: var(--color_blue);
+    color: var(--color_Blue);
 }
 .logo-box i{
     font-size: 30px;
@@ -48,15 +55,18 @@
     line-height: 50px;
     transition: all .5s ease;
 }
+.sidebar.close .logo-box i{
+    transform: rotate(360deg);
+}
 .logo-name{
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 600;
 }
-/*Sidebar List*/
 
+/* ---------- Sidebar List ---------- */
 .sidebar-list{
     height: 100%;
-    padding: 30px 0 15px 0;
+    padding: 30px 0 150px 0;
     overflow: auto;
 }
 .sidebar-list::-webkit-scrollbar{
@@ -66,7 +76,7 @@
     transition: all .5s ease;
 }
 .sidebar-list li:hover{
-    background-color:var(--color_Dark2);
+    background-color: var(--color_Dark2);
 }
 .sidebar-list li .title{
     display: flex;
@@ -76,10 +86,10 @@
     cursor: pointer;
 }
 .sidebar-list li.active .title{
-    background-color: var(--color_blue);
+    background-color: var(--color_Blue);
 }
 .sidebar-list li.active .bxs-chevron-down{
-    transition:  all .5s ease;
+    transition: all .5s ease;
     transform: rotate(180deg);
 }
 .sidebar-list li .title .link{
@@ -92,47 +102,132 @@
     text-align: center;
     line-height: 50px;
     color: var(--color_Light1);
-    font-size: 20px;
+    font-size: 15px;
 }
 .sidebar-list li .title .name{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
-    color:  var(--color_Light1);
+    color: var(--color_Light1);
 }
-/*Sub menu */
-.sidebar-list li .sub-menu{
+
+/* ---------------- Submenu ------------- */
+.sidebar-list li .submenu{
     width: 0;
     height: 0;
     opacity: 0;
-    transition: all .5 ease;
+    transition: all .5s ease;
 }
-.sidebar-list li.dropdown.active .sub-menu{
+.sidebar-list li.dropdown.active .submenu{
     width: unset;
     height: unset;
     opacity: 1;
     display: flex;
     flex-direction: column;
-    padding: 6px 6px 80px;
-    background-color:  var(--color_Dark2);
-    text-align:center;
+    padding: 6px 6px 14px 80px;
+    background-color: var(--color_Dark2);
 }
-.sub-menu .link{
+.submenu .link{
     color: var(--color_Light2);
     font-size: 15px;
-    padding: 10px 0;
+    padding: 5px 0;
     transition: all .5s ease;
 }
-.sub-menu .link:hover{
+.submenu .link:hover{
     color: #fff;
 }
-.sub-menu-title{
+.submenu-title{
     display: none;
 }
-/* ----------------- Responsive / Breakpoints ---------------- */
-@media(max-width: 1080px){
 
+/* ---------------- Submenu Close ------------- */
+.sidebar.close .logo-name,
+.sidebar.close .title .name,
+.sidebar.close .title .bxs-chevron-down
+{
+    display: none;
 }
-/*For Medium Devices*/
-@media (max-width: 774px){
 
+.sidebar.close .sidebar-list{
+    overflow: visible;
+}
+.sidebar.close .sidebar-list li{
+    position: relative;
+}
+.sidebar.close .sidebar-list li .submenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    height: max-content;
+    width: max-content;
+    opacity: 0;
+    transition: all .5s ease;
+    pointer-events: none;
+}
+.sidebar.close .sidebar-list li:hover .submenu{
+    opacity: 1;
+    top: 0;
+    pointer-events: initial;
+    background-color: var(--color_Dark2);
+}
+.sidebar.close .submenu-title{
+    display: block;
+    font-style: 18px;
+    color: var(--color_Light1);
+}
+
+/* =============== Home Section =============== */
+.home{
+    position: relative;
+    background-color: var(--color_Light1);
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 100vh;
+    transition: all .5s ease;
+}
+.sidebar.close ~ .home{
+    left: 78px;
+    width: calc(100% - 78px);
+}
+.home .toggle-sidebar{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+}
+.home .toggle-sidebar i{
+    font-size: 35px;
+    color: var(--color_Dark1);
+    margin-left: 15px;
+}
+.home .toggle-sidebar .text{
+    font-size: 25px;
+    color: var(--color_Dark1);
+    font-weight: 600;
+}
+
+
+
+
+/* ============ Responsive / Breakpoints ========== */
+@media (max-width: 1080px){
+    
+}
+
+/* For Medium Devices */
+@media (max-width: 774px){
+   
+}
+@media (max-width: 560px){
+    
+}
+
+/* For Small Devices */
+@media (max-width: 360px){
+   
 }
