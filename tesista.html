@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestion de Tesis</title>
+
+    <!-- Box Icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="tesista_style.css">
+    <!-- Styles  -->
+    <link rel="shortcut icon" href="/source/logo_unprg.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="sidebar close">
+        <!-- ========== Logo ============  -->
+        <a href="#" class="logo-box">
+            <i class='bx bx-library'></i>
+            <div class="logo-name">Gestion de Tesis</div>
+        </a>
+
+        <!-- ========== List ============  -->
+        <ul class="sidebar-list">
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li>
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="name">Tesista</span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Tesista</a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+
+            <!-- -------- Dropdown List Item ------- -->
+            <li class="dropdown">
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-collection'></i>
+                        <span class="name">Docentes</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Docentes</a>
+                    <a href="#" class="link">Registrar Docentes</a>
+                    <a href="#" class="link">Listar Docentes</a>
+                </div>
+            </li>
+
+            <!-- -------- Dropdown List Item ------- -->
+            <li class="dropdown">
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-book-alt'></i>
+                        <span class="name">Tesistas</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Tesistas</a>
+                    <a href="#" class="link">Registrar Tesistas</a>
+                    <a href="#" class="link">Listar Tesistas</a>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bxs-user'></i>
+                        <span class="name">Usuario</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Jahir Santos</a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-log-out'></i>
+                        <span class="name">Cerrar Sesión</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Cerrar Sesión</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ============= Home Section =============== -->
+    <section class="home">
+        <div class="content-title">
+            <div class="toggle-sidebar">
+                <i class='bx bx-menu'></i>
+            </div>
+            <h2 class="title">¡ Bienvenido Tesista !</h2>
+        </div>
+    </section>
+
+    <!-- Link JS -->
+    <script src="tesista_script.js"></script>
+</body>
+</html>
