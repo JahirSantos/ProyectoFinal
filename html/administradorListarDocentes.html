@@ -9,7 +9,7 @@
 
     <!-- Box Icons  -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="administrador_style.css">
+    <link rel="stylesheet" href="/administrador_style.css">
     <!-- Styles  -->
     <link rel="shortcut icon" href="/source/logo_unprg.png" type="image/x-icon">
 </head>
@@ -34,7 +34,7 @@
                     <!-- <i class='bx bxs-chevron-down'></i> -->
                 </div>
                 <div class="submenu">
-                    <a href="#" class="link submenu-title" onclick="showSection(1)">Administrador</a>
+                    <a href="/html/administrador.html" class="link submenu-title">Administrador</a>
                     <!-- submenu links here  -->
                 </div>
             </li>
@@ -50,8 +50,8 @@
                 </div>
                 <div class="submenu">
                     <a href="#" class="link submenu-title">Docentes</a>
-                    <a href="#" class="link" onclick="showSection(2)">Registrar Docentes</a>
-                    <a href="#" class="link" onclick="showSection(3)">Listar Docentes</a>
+                    <a href="/html/administradorRegistrarDocentes.html" class="link">Registrar Docentes</a>
+                    <a href="#" class="link">Listar Docentes</a>
                 </div>
             </li>
 
@@ -66,8 +66,8 @@
                 </div>
                 <div class="submenu">
                     <a href="#" class="link submenu-title">Tesistas</a>
-                    <a href="#" class="link" onclick="showSection(4)">Registrar Tesistas</a>
-                    <a href="#" class="link" onclick="showSection(5)">Listar Tesistas</a>
+                    <a href="#" class="link">Registrar Tesistas</a>
+                    <a href="#" class="link">Listar Tesistas</a>
                 </div>
             </li>
             <li>
@@ -97,45 +97,15 @@
     </div>
 
     <!-- ============= Home Section =============== -->
-    <section id="section1" class="section home">
+    <section class="home">
             <div class="content-title">
                 <div class="toggle-sidebar">
                     <i class='bx bx-menu'></i>
                 </div>
-                <h2 class="title">¡ Bienvenido Administrador !</h2>
+                <h2 class="title">LISTAR DOCENTES</h2>
             </div>
     </section>
-
-    <section id="section2" class="section">
-        <!--
-            AQUI VA EL CODIGO DEL registrarDocentes
-        -->
-        <p style="font-size: 50px">
-           MADLITOD DFD  
-        </p>
-    </section>
-    <section id="section3" class="section">
-        <!--
-            AQUI VA EL CODIGO DEL listarDocentes
-        -->
-        <h2 class="title">¡ ld !</h2>
-        <p style="font-size: 50px">
-            hOLAAAAA MADLITOD DFD  
-        </p>
-    </section>
-    <section id="section4" class="section">
-        <!--
-            AQUI VA EL CODIGO DEL registrarTesistas
-        -->
-    </section>
-    <section id="section5" class="section">
-        <!--
-            AQUI VA EL CODIGO DEL listarTesistas
-        -->
-    </section>
     <!-- Link JS -->
-    <script src="administrador_script.js">
-        showSection(1);
-    </script>
+    <script src="/administrador_script.js"></script>
 </body>
 </html>
