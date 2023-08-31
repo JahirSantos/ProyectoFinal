@@ -34,7 +34,7 @@
                     <!-- <i class='bx bxs-chevron-down'></i> -->
                 </div>
                 <div class="submenu">
-                    <a href="#" class="link submenu-title">Administrador</a>
+                    <a href="#" class="link submenu-title" onclick="showSection(1)">Administrador</a>
                     <!-- submenu links here  -->
                 </div>
             </li>
@@ -50,8 +50,8 @@
                 </div>
                 <div class="submenu">
                     <a href="#" class="link submenu-title">Docentes</a>
-                    <a href="#" class="link">Registrar Docentes</a>
-                    <a href="#" class="link">Listar Docentes</a>
+                    <a href="#" class="link" onclick="showSection(2)">Registrar Docentes</a>
+                    <a href="#" class="link" onclick="showSection(3)">Listar Docentes</a>
                 </div>
             </li>
 
@@ -66,8 +66,8 @@
                 </div>
                 <div class="submenu">
                     <a href="#" class="link submenu-title">Tesistas</a>
-                    <a href="#" class="link">Registrar Tesistas</a>
-                    <a href="#" class="link">Listar Tesistas</a>
+                    <a href="#" class="link" onclick="showSection(4)">Registrar Tesistas</a>
+                    <a href="#" class="link" onclick="showSection(5)">Listar Tesistas</a>
                 </div>
             </li>
             <li>
@@ -97,36 +97,45 @@
     </div>
 
     <!-- ============= Home Section =============== -->
-    <section class="home">
-        <div class="content-title">
-            <div class="toggle-sidebar">
-                <i class='bx bx-menu'></i>
+    <section id="section1" class="section home">
+            <div class="content-title">
+                <div class="toggle-sidebar">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <h2 class="title">¡ Bienvenido Administrador !</h2>
             </div>
-            <h2 class="title">¡ Bienvenido Administrador !</h2>
-        </div>
     </section>
-    <section class="registrarDocentes">
+
+    <section id="section2" class="section">
         <!--
             AQUI VA EL CODIGO DEL registrarDocentes
         -->
+        <p style="font-size: 50px">
+           MADLITOD DFD  
+        </p>
     </section>
-    <section class="listarDocentes">
+    <section id="section3" class="section">
         <!--
             AQUI VA EL CODIGO DEL listarDocentes
         -->
+        <h2 class="title">¡ ld !</h2>
+        <p style="font-size: 50px">
+            hOLAAAAA MADLITOD DFD  
+        </p>
     </section>
-
-    <section class="registrarTesistas">
+    <section id="section4" class="section">
         <!--
             AQUI VA EL CODIGO DEL registrarTesistas
         -->
     </section>
-    <section class="listarTesistas">
+    <section id="section5" class="section">
         <!--
             AQUI VA EL CODIGO DEL listarTesistas
         -->
     </section>
     <!-- Link JS -->
-    <script src="administrador_script.js"></script>
+    <script src="administrador_script.js">
+        showSection(1);
+    </script>
 </body>
 </html>

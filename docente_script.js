@@ -20,3 +20,24 @@ toggleSidebar.addEventListener("click", () => {
 logo.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });
+  
+function viewContent(){
+  const navLinks = document.querySelectorAll('.link');
+
+  function showPage(target) {
+    const pages = document.querySelectorAll('.section');
+    pages.forEach(page => {
+      page.style.display = 'none';
+    });
+    const selectedPage = document.getElementById(target);
+    selectedPage.style.display = 'block';
+  }
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const target = this.getAttribute('data-target');
+      showPage(target);
+    });
+  });
+
+  showPage('home');
+}

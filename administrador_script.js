@@ -20,3 +20,18 @@ toggleSidebar.addEventListener("click", () => {
 logo.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });
+
+function showSection(sectionNumber) {
+  // Oculta todas las secciones
+  var sections = document.getElementsByClassName("section");
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].style.display = "none";
+  }
+
+  // Muestra la sección seleccionada
+  var selectedSection = document.getElementById("section" + sectionNumber);
+  if (selectedSection) {
+    selectedSection.style.display = "block";
+  }
+}
+showSection(1);
