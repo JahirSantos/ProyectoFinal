@@ -9,8 +9,8 @@
 
     <!-- Box Icons  -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/tesista_style.css">
-    <<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Styles  -->
     <link rel="shortcut icon" href="/source/logo_unprg.png" type="image/x-icon">
 </head>
@@ -136,8 +136,34 @@
             <div class="toggle-sidebar">
                 <i class='bx bx-menu'></i>
             </div>
-            <h2 class="title">¡ Bienvenido Tesista !</h2>
+            <h2 class="title">Mis Proyectos</h2>
         </div>
+        <table class="table ml-5">
+            <thead class="table-dark">
+                    <td>Título</td>
+                    <td>Tipo de Proyecto</td>
+                    <td>Estado</td>
+                    <td>Fecha de Inicio</td>
+                    <td>Operaciones</td> 
+            </thead>
+            <tbody>
+            <?php
+                require("conectar.php");
+                $sentencia = $conexion->prepare("select DP.Titulo, DP.TipoProyecto,IP.Estado,IP.FechaInicio from tesista as T join proyecto as P join datosprincipales as DP join informeparcial_has_proyecto as IPH join informeparcial as IP on T.idTesista = P.idProyecto and P.idProyecto=DP.idDatosPrincipales and P.idProyecto= IPH.idInformes and IPH.idInformes=IP.idInformeParcial where T.idTesista = ?");
+                $sentencia->execute();
+                if($sentencia){
+                    echo ("<tr>");
+                    echo ("<td>" . $fila['idTesista'] . "</td>")
+                    echo ("<td>" . $fila['Título'] . "</td>");
+                    echo ("<td>" . $fila['Tipo de Proyecto'] . "</td>");
+                    echo ("<td>" . $fila['Estado'] . "</td>");
+                    echo ("<td>" . $fila['Fecha de Inicio'] . "</td>");
+                    echo ("<td>" . "<a href='modificarProyectoTesista.php?idTesista={$fila['idTesista']}' class='btn btn-warning'>Modificar</a>" . "</td>");
+                    echo ("</tr>");
+                }
+            ?>
+            </tbody>
+        </table>
     </section>
     <!-- Link JS -->
     <script src="/tesista_script.js"></script>
